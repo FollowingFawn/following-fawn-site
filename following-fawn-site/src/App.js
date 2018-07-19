@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './sass/App.css';
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
+          <Homepage />
         <Footer/>
       </div>
     );
