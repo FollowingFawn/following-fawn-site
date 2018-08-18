@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './sass/App.css';
+import './sass/global/Global.css';
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import Header from './components/headerComponent/header';
-import Footer from './components/footerComponent/footer';
+import FooterPage from './components/footerComponent/footer';
 import Homepage from './components/pages/homePage';
 
 class App extends Component {
@@ -12,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Header/>
           <Homepage />
-        <Footer/>
+        <FooterPage/>
       </div>
     );
   }

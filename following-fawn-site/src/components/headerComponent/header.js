@@ -1,32 +1,37 @@
-import React, { Component } from 'react';
+import React from "react"
+import { Navbar, Nav, NavItem} from 'react-bootstrap';
 
-class Header extends Component {
-  render() {
-    return (
-        <header>
-            <div className="logo">
-                LOGO
-            </div>
-
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Resume</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
-  }
+export class Header extends React.Component {
+    render() {
+        return (
+            <Navbar fixedTop collapseOnSelect>
+            <Navbar.Header>
+                <Navbar.Brand>
+                <a href="#brand">Fawn Stevens</a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                <NavItem eventKey={1} href="#">
+                    Resume
+                </NavItem>
+                <NavItem eventKey={2} href="#">
+                    Contact
+                </NavItem>
+                </Nav>
+                <Nav pullRight>
+                <NavItem eventKey={1} href="#">
+                    LinkedIn
+                </NavItem>
+                <NavItem eventKey={2} href="#">
+                    GitHub
+                </NavItem>
+                </Nav>
+            </Navbar.Collapse>
+            </Navbar>
+        );
+    }
 }
 
 export default Header;
